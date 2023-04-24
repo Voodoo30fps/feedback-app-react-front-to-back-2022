@@ -13,6 +13,8 @@ import FeedbackForm from './components/FeedbackForm';
 
 import FeedbackData from './data/FeedbackData';
 
+import AboutIconLink from './components/AboutIconLink';
+
 import AboutPage from './components/pages/AboutPage';
 
 function App() {
@@ -50,10 +52,12 @@ function App() {
                 />
               </Fragment>
             }
-          ></Route>
+          />
 
           <Route path='/about' element={<AboutPage />} />
         </Routes>
+
+        <AboutIconLink />
       </div>
     </Router>
   );
