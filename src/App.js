@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import { Fragment } from 'react';
+
 import Header from './components/Header';
+
 import FeedbackList from './components/FeedbackList';
+import FeedbackStats from './components/FeedbackStats';
 import FeedbackData from './data/FeedbackData';
 
 function App() {
@@ -16,7 +19,10 @@ function App() {
   return (
     <Fragment>
       <Header />
+
       <div className='container'>
+        <FeedbackStats feedback={feedback} />
+
         <FeedbackList feedback={feedback} handleDelete={deleteFeedback} />
       </div>
     </Fragment>
