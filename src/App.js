@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 import { useState } from 'react';
 import { Fragment } from 'react';
 
@@ -17,12 +19,19 @@ function App() {
     }
   };
 
+  const addFeedback = (newFeedback) => {
+    newFeedback.id = uuidv4();
+    console.log(newFeedback);
+
+    setFeedback([newFeedback, ...feedback]);
+  };
+
   return (
     <Fragment>
       <Header />
 
       <div className='container'>
-        <FeedbackForm />
+        <FeedbackForm handleAdd={addFeedback} />
 
         <FeedbackStats feedback={feedback} />
 
