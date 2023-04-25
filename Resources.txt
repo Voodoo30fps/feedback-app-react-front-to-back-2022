@@ -1,0 +1,3 @@
+UUID (id generator)
+JSON Server (fake REST API)
+Concurrently (run multiple scripts at once - used for npm to run npm run dev and json server at the same time)
